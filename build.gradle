@@ -15,6 +15,11 @@ repositories {
 }
 
 dependencies {
+    implementation ('org.apache.hadoop:hadoop-common:3.1.0') {
+
+        transitive = false
+
+    }
     implementation ('org.apache.hive:hive-jdbc:3.1.2'){
         exclude group:'org.eclipse.jetty'
         exclude group:'tomcat'
