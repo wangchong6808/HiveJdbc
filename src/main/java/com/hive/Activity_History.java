@@ -26,7 +26,6 @@ public class Activity_History {
             }
         }
         System.out.println("send A_history json success!");
-        logger.info("send A_history json success!");
         rs.close();
         stmt.close();
         conn.close();
