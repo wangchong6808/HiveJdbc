@@ -31,19 +31,17 @@ public class JdbcHelper {
 
         org.apache.hadoop.conf.Configuration conf = new org.apache.hadoop.conf.Configuration();
         conf.set("hadoop.security.authentication", "Kerberos");
-        if (System.getProperty("os.name").toLowerCase().startsWith("linux")) {
-            conf.set("java.security.krb5.realm", "CORPCN.NET");
-            System.setProperty("java.security.krb5.conf", "/etc/krb5.conf");
+        conf.set("java.security.krb5.realm", "CORPCN.NET");
+        System.setProperty("java.security.krb5.conf", "/etc/krb5.conf");
 
-            UserGroupInformation.setConfiguration(conf);
-            UserGroupInformation.loginUserFromKeytab("bdp_admin_s","/home/pssx_a_chonwa@corpcn.net/bdp_admin_s.keytab");
+        UserGroupInformation.setConfiguration(conf);
+        UserGroupInformation.loginUserFromKeytab("bdp_admin_s","/home/pssx_a_chonwa@corpcn.net/bdp_admin_s.keytab");
 
-            Class.forName("org.apache.hive.jdbc.HiveDriver");
-            System.out.println("getting connection");
-            con = DriverManager.getConnection("jdbc:hive2://zk0-p001dl.corpcn.net:2181,zk1-p001dl.corpcn.net:2181,zk3-p001dl.corpcn.net:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2");
+        Class.forName("org.apache.hive.jdbc.HiveDriver");
+        System.out.println("getting connection");
+        con = DriverManager.getConnection("jdbc:hive2://zk0-p001dl.corpcn.net:2181,zk1-p001dl.corpcn.net:2181,zk3-p001dl.corpcn.net:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2");
 
 
-        }
         return con;
     }
 
