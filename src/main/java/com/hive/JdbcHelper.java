@@ -39,7 +39,7 @@ public class JdbcHelper {
 
         Class.forName("org.apache.hive.jdbc.HiveDriver");
         System.out.println("getting connection");
-        con = DriverManager.getConnection("jdbc:hive2://zk0-p001dl.corpcn.net:2181,zk1-p001dl.corpcn.net:2181,zk3-p001dl.corpcn.net:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2");
+        con = DriverManager.getConnection("jdbc:hive2://zk1-p001dl.corpcn.net:2181,zk2-p001dl.corpcn.net:2181,zk4-p001dl.corpcn.net:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2");
 
 
         return con;
