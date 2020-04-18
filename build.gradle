@@ -2,7 +2,7 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '5.2.0'
     id 'java'
 }
-
+apply plugin: 'project-report'
 group = 'com.diamler'
 version = '1'
 sourceCompatibility = '11'
@@ -20,6 +20,8 @@ dependencies {
         exclude group:'tomcat'
         exclude group:'javax.servlet'
         exclude group:'org.mortbay.jetty'
+        exclude group:'org.apache.hbase'
+        exclude group:'com.github.joshelser'
     }
     /*compile fileTree(dir: 'libs', include: ['*.jar'])*/
 }
