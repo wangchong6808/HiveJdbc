@@ -15,14 +15,14 @@ public class JdbcHelper {
     private static Connection con = null;
 
     public static Connection getConnect() {
-        if (con == null) {
+        //if (con == null) {
             try {
                 con = connect();
             } catch (ClassNotFoundException | IOException | SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
-        }
+       // }
         System.out.println(con+"  this is to get conn in helper");
         return con;
     }
