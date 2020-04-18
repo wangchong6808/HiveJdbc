@@ -11,6 +11,10 @@ import org.slf4j.LoggerFactory;
 public class Activity_History {
 
     public static void main(String[] args) throws SQLException {
+        test();
+    }
+
+    public static void test() throws SQLException {
         final Logger logger = LoggerFactory.getLogger(Activity_History.class);
         Connection conn = JdbcHelper.getConnect();
         String sql = "SELECT * FROM rawdata_cdm.rw_cust_cdm_accnt LIMIT 10" ;
