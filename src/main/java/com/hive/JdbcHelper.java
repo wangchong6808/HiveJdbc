@@ -36,7 +36,7 @@ public class JdbcHelper {
             System.setProperty("java.security.krb5.conf", "/etc/krb5.conf");
 
             UserGroupInformation.setConfiguration(conf);
-            UserGroupInformation.loginUserFromKeytab("bdp_admin_s","/home/CORPCN/bdp_admin_s/bdp_admin_s.keytab");
+            UserGroupInformation.loginUserFromKeytab("bdp_admin_s","/home/pssx_a_chonwa@corpcn.net/bdp_admin_s.keytab");
 
             Class.forName("org.apache.hive.jdbc.HiveDriver");
             System.out.println("getting connection");
