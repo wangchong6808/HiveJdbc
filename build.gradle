@@ -15,20 +15,30 @@ repositories {
 }
 
 dependencies {
-    implementation ('org.apache.hadoop:hadoop-common:3.1.0') {
-
-        transitive = false
-
-    }
-    implementation ('org.apache.hive:hive-jdbc:3.1.2'){
+    implementation ('org.apache.hadoop:hadoop-common:2.7.3') {transitive = false}
+    implementation ('org.apache.hadoop:hadoop-auth:2.7.3') {transitive = false}
+    implementation ('org.apache.hive:hive-jdbc:3.1.2'){transitive = false}
+    implementation ('org.apache.hive:hive-exec:3.1.2'){transitive = false}
+    implementation ('org.apache.hive:hive-common:3.1.2'){transitive = false}
+    implementation ('org.apache.hive:hive-service:3.1.2'){transitive = false}
+    implementation ('org.apache.hive:hive-metastore:3.1.2'){transitive = false}
+    implementation ('org.apache.zookeeper:zookeeper:3.4.9'){transitive = false}
+    implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.12'
+    implementation group: 'commons-collections', name: 'commons-collections', version: '3.2.2'
+    implementation group: 'log4j', name: 'log4j', version: '1.2.17'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+    testCompile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.30'
+    /*implementation ('org.apache.hive:hive-jdbc:3.1.2'){
         exclude group:'org.eclipse.jetty'
         exclude group:'tomcat'
         exclude group:'javax.servlet'
         exclude group:'org.mortbay.jetty'
         exclude group:'org.apache.hbase'
         exclude group:'com.github.joshelser'
-    }
-    /*compile fileTree(dir: 'libs', include: ['*.jar'])*/
+    }*/
+    //implementation files('libs/jackson-all-1.9.11.jar')
+    //implementation files('libs/hadoop-common-2.7.3.2.5.3.0-37.jar')
+    //compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
 shadowJar {
