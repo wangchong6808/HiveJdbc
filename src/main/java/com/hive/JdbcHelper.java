@@ -35,7 +35,14 @@ public class JdbcHelper {
         System.setProperty("java.security.krb5.conf", "/etc/krb5.conf");
 
         UserGroupInformation.setConfiguration(conf);
-        UserGroupInformation.loginUserFromKeytab("bdp_admin_s","/home/pssx_a_chonwa@corpcn.net/bdp_admin_s.keytab");
+        String fileName = "/home/bdp_admin_s/HiveTest/bdp_admin_s.keytab";
+        File file = new File(fileName);
+        if (file.exists()) {
+            System.out.println(fileName + " exists");
+        } else {
+            System.out.println(fileName + " does not exist");
+        }
+        UserGroupInformation.loginUserFromKeytab("bdp_admin_s",fileName);
 
         Class.forName("org.apache.hive.jdbc.HiveDriver");
         System.out.println("getting connection");
