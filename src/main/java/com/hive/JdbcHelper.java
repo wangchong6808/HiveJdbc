@@ -14,10 +14,10 @@ public class JdbcHelper {
 
     private static Connection con = null;
 
-    public static Connection getConnect() {
+    public static Connection getConnect(String username) {
         //if (con == null) {
             try {
-                con = connect();
+                con = connect(username);
             } catch (ClassNotFoundException | IOException | SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -27,7 +27,7 @@ public class JdbcHelper {
         return con;
     }
 
-    private static Connection connect() throws IOException, ClassNotFoundException, SQLException {
+    private static Connection connect(String userName) throws IOException, ClassNotFoundException, SQLException {
 
         org.apache.hadoop.conf.Configuration conf = new org.apache.hadoop.conf.Configuration();
         conf.set("hadoop.security.authentication", "Kerberos");
@@ -37,14 +37,14 @@ public class JdbcHelper {
         System.setProperty("java.security.krb5.conf", confFile);
 
         UserGroupInformation.setConfiguration(conf);
-        String fileName = "/home/bdp_admin_s/HiveTest/bdp_admin_s.keytab";
+        String fileName = String.format("/app/%s.keytab",userName);
         File file = new File(fileName);
         if (file.exists()) {
             System.out.println(fileName + " exists");
         } else {
             System.out.println(fileName + " does not exist");
         }
-        UserGroupInformation.loginUserFromKeytab("bdp_admin_s",fileName);
+        UserGroupInformation.loginUserFromKeytab(userName,fileName);
 
         Class.forName("org.apache.hive.jdbc.HiveDriver");
         System.out.println("getting connection");
@@ -76,12 +76,5 @@ public class JdbcHelper {
         }
     }
 
-    public static void main(String[] args)
-            throws InstantiationException, IllegalAccessException, NoSuchMethodException, SecurityException {
-        System.out.println(getConnect());
-        con = null;
-        closeConn(con);
-
-    }
 
 }
