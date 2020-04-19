@@ -32,7 +32,9 @@ public class JdbcHelper {
         org.apache.hadoop.conf.Configuration conf = new org.apache.hadoop.conf.Configuration();
         conf.set("hadoop.security.authentication", "Kerberos");
         conf.set("java.security.krb5.realm", "CORPCN.NET");
-        System.setProperty("java.security.krb5.conf", "/etc/krb5.conf");
+        String confFile = "/home/bdp_admin_s/HiveTest/krb5.conf";
+        System.out.println("read krb5.conf from " + confFile);
+        System.setProperty("java.security.krb5.conf", confFile);
 
         UserGroupInformation.setConfiguration(conf);
         String fileName = "/home/bdp_admin_s/HiveTest/bdp_admin_s.keytab";
