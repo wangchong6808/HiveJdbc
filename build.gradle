@@ -17,15 +17,15 @@ repositories {
 }
 
 dependencies {
-    implementation ('commons-configuration:commons-configuration:1.6'){transitive = false}
+    /*implementation ('commons-configuration:commons-configuration:1.6'){transitive = false}
     implementation ('log4j:log4j:1.2.17'){transitive = false}
     implementation ('org.apache.hadoop:hadoop-auth:2.7.3.2.5.3.164-1'){transitive = false}
     implementation ('org.apache.hadoop:hadoop-common:2.7.3.2.5.3.164-1'){transitive = false}
     implementation ('org.apache.hive:hive-jdbc:1.2.1000.2.5.3.164-1:standalone'){transitive = false}
     implementation ('org.slf4j:slf4j-api:1.7.14'){transitive = false}
     implementation ('org.slf4j:slf4j-log4j12:1.7.10'){transitive = false}
-    implementation ('xerces:xercesImpl:2.9.1'){transitive = false}
-
+    implementation ('xerces:xercesImpl:2.9.1'){transitive = false}*/
+    implementation ('org.apache.hive:hive-jdbc:1.2.1000.2.5.3.164-1')
 
 
 
