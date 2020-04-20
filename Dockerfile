@@ -7,5 +7,5 @@ COPY ./keys/bdp_otrdwh_s.keytab /app/bdp_otrdwh_s.keytab
 COPY ./build/libs/HiveJdbc-1-all.jar /app/HiveJdbc-1-all.jar
 WORKDIR /app
 EXPOSE 8090
-USER root
+USER 1000
 CMD ["java", "-cp", "/app/HiveJdbc-1-all.jar", "com.hive.Start"]
