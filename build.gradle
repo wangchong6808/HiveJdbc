@@ -29,7 +29,7 @@ dependencies {
 
 
     implementation ('com.google.guava:guava:16.0.1'){transitive = false}
-    //implementation ('commons-codec:commons-codec:1.9'){transitive = false}
+    implementation ('commons-codec:commons-codec:1.9'){transitive = false}
     implementation ('commons-collections:commons-collections:3.2.2'){transitive = false}
     implementation ('commons-configuration:commons-configuration:1.6'){transitive = false}
     implementation ('commons-io:commons-io:2.4'){transitive = false}
@@ -50,7 +50,6 @@ dependencies {
     implementation ('org.apache.hive:hive-jdbc:1.2.1000.2.5.3.164-1'){transitive = false}
     implementation ('org.apache.hive:hive-metastore:1.2.1000.2.5.3.164-1'){transitive = false}
     implementation ('org.apache.hive:hive-service:1.2.1000.2.5.3.164-1'){transitive = false}
-
     implementation ('org.apache.httpcomponents:httpclient:4.5.2'){transitive = false}
     implementation ('org.apache.httpcomponents:httpcore:4.4.4'){transitive = false}
     implementation ('org.apache.thrift:libthrift:0.9.3'){transitive = false}
