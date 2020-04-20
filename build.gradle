@@ -29,16 +29,16 @@ dependencies {
 
 
     implementation ('com.google.guava:guava:16.0.1'){transitive = false}
-    implementation ('commons-codec:commons-codec:1.9'){transitive = false}
+    //implementation ('commons-codec:commons-codec:1.9'){transitive = false}
     implementation ('commons-collections:commons-collections:3.2.2'){transitive = false}
     implementation ('commons-configuration:commons-configuration:1.6'){transitive = false}
     implementation ('commons-io:commons-io:2.4'){transitive = false}
     implementation ('commons-lang:commons-lang:2.6'){transitive = false}
     implementation ('commons-logging:commons-logging:1.2'){transitive = false}
     implementation ('log4j:log4j:1.2.17'){transitive = false}
-    /*implementation ('org.apache.curator:curator-client:2.7.1'){transitive = false}
+    implementation ('org.apache.curator:curator-client:2.7.1'){transitive = false}
     implementation ('org.apache.curator:curator-framework:2.7.1'){transitive = false}
-    implementation ('org.apache.curator:curator-recipes:2.7.1'){transitive = false}*/
+    implementation ('org.apache.curator:curator-recipes:2.7.1'){transitive = false}
     implementation ('org.apache.hadoop:hadoop-auth:2.7.3.2.5.3.164-1'){transitive = false}
     implementation ('org.apache.hadoop:hadoop-common:2.7.3.2.5.3.164-1'){transitive = false}
     implementation ('org.apache.hive.shims:hive-shims-0.20S:1.2.1000.2.5.3.164-1'){transitive = false}
