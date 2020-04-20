@@ -58,9 +58,9 @@ dependencies {
     //implementation ('org.apache.htrace:htrace-core:3.1.0-incubating'){transitive = false}
     implementation ('org.apache.httpcomponents:httpclient:4.5.2'){transitive = false}
     implementation ('org.apache.httpcomponents:httpcore:4.4.4'){transitive = false}
-    /*implementation ('org.apache.parquet:parquet-hadoop-bundle:1.8.1'){transitive = false}
+    /*implementation ('org.apache.parquet:parquet-hadoop-bundle:1.8.1'){transitive = false}*/
     implementation ('org.apache.thrift:libfb303:0.9.3'){transitive = false}
-    implementation ('org.apache.thrift:libthrift:0.9.3'){transitive = false}*/
+    implementation ('org.apache.thrift:libthrift:0.9.3'){transitive = false}
     implementation ('org.apache.zookeeper:zookeeper:3.4.6.2.5.3.164-1'){transitive = false}
     implementation ('org.codehaus.jackson:jackson-core-asl:1.9.13'){transitive = false}
     implementation ('org.codehaus.jackson:jackson-jaxrs:1.8.3'){transitive = false}
