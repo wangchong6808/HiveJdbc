@@ -32,12 +32,12 @@ public class JdbcHelper {
         org.apache.hadoop.conf.Configuration conf = new org.apache.hadoop.conf.Configuration();
         conf.set("hadoop.security.authentication", "Kerberos");
         conf.set("java.security.krb5.realm", "CORPCN.NET");
-        String confFile = "/app/krb5.conf";
+        String confFile = System.getenv("KRB_CONF_PATH") + "/krb5.conf";
         System.out.println("read krb5.conf from " + confFile);
         System.setProperty("java.security.krb5.conf", confFile);
 
         UserGroupInformation.setConfiguration(conf);
-        String fileName = String.format("/app/%s.keytab",userName);
+        String fileName = System.getenv("KRB_CONF_PATH") + String.format("/%s.keytab",userName);
         File file = new File(fileName);
         if (file.exists()) {
             System.out.println(fileName + " exists");
