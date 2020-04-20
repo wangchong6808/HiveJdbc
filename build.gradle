@@ -105,7 +105,7 @@ dependencies {
     implementation ('org.apache.curator:curator-framework:2.7.1'){transitive = false}
     implementation ('org.apache.curator:curator-recipes:2.6.0'){transitive = false}
     implementation ('org.apache.curator:curator-recipes:2.7.1'){transitive = false}
-    implementation ('org.apache.derby:derby:10.10.2.0'){transitive = false}
+    //implementation ('org.apache.derby:derby:10.10.2.0'){transitive = false}
     implementation ('org.apache.directory.api:api-asn1-api:1.0.0-M20'){transitive = false}
     implementation ('org.apache.directory.api:api-util:1.0.0-M20'){transitive = false}
     implementation ('org.apache.directory.server:apacheds-i18n:2.0.0-M15'){transitive = false}
