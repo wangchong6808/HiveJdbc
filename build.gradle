@@ -17,19 +17,11 @@ repositories {
 }
 
 dependencies {
-    implementation ('com.github.joshelser:dropwizard-metrics-hadoop-metrics2-reporter:0.1.2'){transitive = false}
     implementation ('commons-configuration:commons-configuration:1.6'){transitive = false}
     implementation ('log4j:log4j:1.2.17'){transitive = false}
     implementation ('org.apache.hadoop:hadoop-auth:2.7.3.2.5.3.164-1'){transitive = false}
     implementation ('org.apache.hadoop:hadoop-common:2.7.3.2.5.3.164-1'){transitive = false}
     implementation ('org.apache.hive:hive-jdbc:1.2.1000.2.5.3.164-1:standalone'){transitive = false}
-    /*implementation ('org.apache.htrace:htrace-core:3.1.0-incubating'){transitive = false}
-    implementation ('org.apache.httpcomponents:httpclient:4.5.2'){transitive = false}
-    implementation ('org.apache.httpcomponents:httpcore:4.4.4'){transitive = false}
-    implementation ('org.apache.parquet:parquet-hadoop-bundle:1.8.1'){transitive = false}
-    implementation ('org.apache.thrift:libfb303:0.9.3'){transitive = false}
-    implementation ('org.apache.thrift:libthrift:0.9.3'){transitive = false}
-    implementation ('org.apache.zookeeper:zookeeper:3.4.6.2.5.3.164-1'){transitive = false}*/
     implementation ('org.slf4j:slf4j-api:1.7.14'){transitive = false}
     implementation ('org.slf4j:slf4j-log4j12:1.7.10'){transitive = false}
     implementation ('xerces:xercesImpl:2.9.1'){transitive = false}
